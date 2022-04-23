@@ -13,13 +13,16 @@ void loop() {
   volume = (float)analogRead(analogPin) / 1024.0f * 100.0f; // analogReadは0~1024の値を取る．音の大きさを%に変換
   Serial.print("音量:");
   Serial.println(volume); // シリアルモニタに音量を表示
-  if(volume > limit){
-    analogWrite(ledPin,0);
-    delay(5000); // 3000ms（3秒）待つ
-
+  analogWrite(ledPin,random(16, 255)); //LEDがランダムに光る
+  delay(100); // 100ms（0.1秒）待つ
+  /*
+  if(volume > limit){ // volumeがlimitより大きい場合
+    digitalWrite(ledPin,HIGH); // LEDが光る
+    delay(100); // 3000ms（3秒）待つ
   }
   else{
-    analogWrite(ledPin,random(16, 255)); //LEDがランダムに光る
+    digitalWrite(ledPin,LOW); // LEDを光らせない
     delay(100); // 100ms（0.1秒）待つ
   }
+  */
 }

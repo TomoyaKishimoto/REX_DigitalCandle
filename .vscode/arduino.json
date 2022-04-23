@@ -1,5 +1,5 @@
 {
     "board": "arduino:avr:uno",
     "port": "COM3",
-    "sketch": "DigitalCandle1\\DigitalCandle1.ino"
+    "sketch": "DigitalCandle3_fricker\\DigitalCandle3_fricker.ino"
 }
